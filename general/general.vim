@@ -5,7 +5,8 @@ let g:limelight_conceal_guifg = '#777777'
 set wrap
 set noswapfile incsearch
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
-set scrolloff=999
+" set scrolloff=999
+set scrolloff=4
 set nofoldenable
 
 set ignorecase
@@ -20,18 +21,44 @@ set linebreak
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline#extensions#wordcount#filetypes = '\vnotes|help|markdown|rst|org|text|asciidoc|tex|mail|vimwiki'
 
+" removing trailing lines and trimming whitespaces
+let g:ale_fixers = {
+    \'*': ['remove_trailing_lines', 'trim_whitespace'],
+    \'javascript': ['prettier', 'eslint'],
+    \'css': ['prettier'],
+    \'python': ['autoflake', 'autoimport', 'autopep8', 'isort', 'yapf'],
+\}
+
+" \           'pyflyby'],
+let g:ale_fix_on_save = 1
+let g:ale_floating_preview = 1
+let g:ale_set_balloons = 1
+let g:ale_hover_to_preview = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
+" let g:ale_cursor_detail = 1
+
+" augroup ale_hover_cursor
+"     autocmd!
+"     autocmd CursorHold * ALEHover
+" augroup end
+
+" neoformatter for python
+let g:neoformat_python_autopep8 = {}
+let g:neoformat_enabled_python = ['autopep8', 'yapf', 'docformatter']
+
+
 "Theme specific
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
-:hi CursorLine   cterm=bold ctermbg=white ctermfg=black 
-" :set cursorline
+:hi CursorLine   cterm=bold ctermbg=white ctermfg=black
+:set cursorline
 
 "Goyo Settings
 function! s:goyo_enter()
   set noshowmode
   set noshowcmd
-  :hi CursorLine   cterm=bold ctermbg=white ctermfg=black 
+  :hi CursorLine   cterm=bold ctermbg=white ctermfg=black
   :set cursorline
   Limelight
 endfunction
@@ -39,7 +66,7 @@ endfunction
 function! s:goyo_leave()
   set showmode
   set showcmd
-  :hi CursorLine   cterm=bold ctermbg=white ctermfg=black 
+  :hi CursorLine   cterm=bold ctermbg=white ctermfg=black
   :set cursorline
   Limelight!
 endfunction
@@ -89,6 +116,3 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
 
 let g:tablineclosebutton=1
-
-
-

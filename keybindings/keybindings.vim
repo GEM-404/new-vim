@@ -8,7 +8,7 @@ nnoremap <C-b> :vsplit<CR>
 nnoremap <C-w> :split<CR>
 
 " Moving in between buffers
-nnoremap bp :bPrevious<CR> 
+nnoremap bp :bPrevious<CR>
 nnoremap bn :bNext<CR>
 nnoremap bd :bdelete<CR>
 
@@ -29,7 +29,7 @@ nnoremap <C-q> :wqa<CR>
 " imap <C-s> :<Esc>:wqa!<CR>
 
 " nmap for floating terminal
-nnoremap <leader>t :FloatermNew<CR>
+nnoremap tf :FloatermNew<CR>
 
 " Closing all opened splits leaving the one you are currently on.
 nnoremap <C-d> :only<CR>
@@ -77,7 +77,7 @@ nnoremap <silent> <C-M-h>    :vertical resize -2<CR>
 nnoremap <leader>w :w!<CR>
 nnoremap <leader>q :q!<CR>
 
-map <F1> nop 
+map <F1> nop
 
 " For NERDTree
 " nnoremap <leader>n :NERDTreeFocus<CR>
@@ -85,7 +85,7 @@ nnoremap tt :NERDTreeToggle<CR>
 nnoremap <silent>;w :w!<CR>
 nnoremap <silent>;q :q!<CR>
 
-nnoremap <C-s> :noh<CR>
+nnoremap <C-s> :wqa<CR>
 
 " Goyo
 nnoremap <C-g> :Goyo<CR>
@@ -95,7 +95,7 @@ nnoremap <leader>v :e ~/.vim_runtime/init.vim<CR>
 
 "Disable Arrow Keys
 nnoremap <Up> <nop>
-nnoremap <Down> <nop> 
+nnoremap <Down> <nop>
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
 
@@ -132,6 +132,7 @@ nnoremap <leader>fh :<cmd>Telescope help_tags<cr>
 " new colorschemes keybindings;
 nnoremap tv :colorscheme gruvbox<cr>
 nnoremap tm :colorscheme monokai<cr>
+
 nnoremap to :colorscheme onedark<cr>
 " nnoremap td :colorscheme default<cr>
 nnoremap tr :colorscheme dracula<cr>
@@ -139,3 +140,25 @@ nnoremap tr :colorscheme dracula<cr>
 " Autocorrect
 nnoremap au 1z=
 nnoremap <leader>au z=
+
+"keep cursor in the middle all the time :)
+"nnoremap k kzz
+"nnoremap j jzz
+"nnoremap p pzz
+"nnoremap P Pzz
+"nnoremap G Gzz
+"nnoremap x xzz
+"inoremap <ESC> <ESC>zz
+"nnoremap <ENTER> <ENTER>zz
+"inoremap <ENTER> <ENTER>ESC><zzi
+"nnoremap o o<ESC>zza
+"nnoremap O O<ESC>zza
+"nnoremap a a<ESC>zza
+"
+
+nnoremap <leader>ff :SearchBoxIncSearch<cr>
+xnoremap <leader>fr :SearchBoxIncSearch visual_mode=true<cr>
+
+
+" nnoremap <leader>ff :SearchBoxIncSearch<cr>
+" nnoremap <leader>fr :SearchBoxIncSearch<cr>

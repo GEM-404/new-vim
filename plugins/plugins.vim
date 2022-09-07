@@ -2,16 +2,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 "
 " Colorschemes...
-" 
-"     ▜         ▌          
+"
+"     ▜         ▌
 " ▛▘▛▌▐ ▛▌▛▘▛▘▛▘▛▌█▌▛▛▌█▌▛▘
 " ▙▖▙▌▐▖▙▌▌ ▄▌▙▖▌▌▙▖▌▌▌▙▖▄▌
-"                          
-" 
+"
+"
 Plug 'joshdick/onedark.vim'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'dracula/vim', { 'as': 'dracula' } 
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sainnhe/sonokai'
 Plug 'sickill/vim-monokai'
 Plug 'bluz71/vim-moonfly-colors'
@@ -22,10 +22,13 @@ Plug 'andreasvc/vim-256noir'
 "
 "     ▗         ▗   ▐▘▐▘
 " █▌▚▘▜▘▛▘▀▌  ▛▘▜▘▌▌▜▘▜▘
-" ▙▖▞▖▐▖▌ █▌  ▄▌▐▖▙▌▐ ▐ 
-"                       
-" 
+" ▙▖▞▖▐▖▌ █▌  ▄▌▐▖▙▌▐ ▐
+"
+"
 Plug 'voldikss/vim-floaterm'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'VonHeikemen/searchbox.nvim'
+Plug 'gaoDean/autolist.nvim'
 Plug 'powerline/powerline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -70,10 +73,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 
 "      ▌▘        ▗   ▐▘▐▘
 " ▛▘▛▌▛▌▌▛▌▛▌  ▛▘▜▘▌▌▜▘▜▘
-" ▙▖▙▌▙▌▌▌▌▙▌  ▄▌▐▖▙▌▐ ▐ 
-"          ▄▌            
+" ▙▖▙▌▙▌▌▌▌▙▌  ▄▌▐▖▙▌▐ ▐
+"          ▄▌
 "
 Plug 'ap/vim-css-color'
+Plug 'dense-analysis/ale'
 Plug 'plasticboy/vim-markdown'
 Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'kyazdani42/nvim-tree.lua'
