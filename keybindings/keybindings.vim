@@ -8,8 +8,10 @@ nnoremap <C-b> :vsplit<CR>
 nnoremap <C-w> :split<CR>
 
 " Moving in between buffers
-nnoremap bp :bPrevious<CR>
+nnoremap bp :bprevious<CR>
 nnoremap bn :bNext<CR>
+nnoremap bf :bfirst<CR>
+nnoremap bl :blast<CR>
 nnoremap bd :bdelete<CR>
 
 " For faster key movement
